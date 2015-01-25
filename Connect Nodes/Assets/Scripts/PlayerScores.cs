@@ -4,11 +4,12 @@ using System.Collections;
 public class PlayerScores : MonoBehaviour {
 	public GameObject ScoreP1;
 	public GameObject ScoreP2;
-	int Player1_Score = 0;
-	int Player2_Score = 0;
+	static int Player1_Score = 0;
+	static int Player2_Score = 0;
+
 	public void IncrementScoreP1(int value)
 	{
-		Player1_Score += value;
+    	Player1_Score += value;
 		ScoreP1.GetComponent<TextMesh> ().text = Player1_Score.ToString ();
 	}
 	public void IncrementScoreP2(int value)
